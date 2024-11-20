@@ -1,0 +1,22 @@
+<!-- vehiculo/templates/vehiculo/listar_vehiculos.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Listado de Vehículos</h2>
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Rango de Precio</th>
+        </tr>
+        {% for v in vehiculo %}
+        <tr>
+            <td>{{ v.marca }}</td>
+            <td>{{ v.modelo }}</td>
+            <td>{{ v.precio }}</td>
+            <td>{{ v.rango_precio }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
